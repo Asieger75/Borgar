@@ -5,7 +5,16 @@ var borgar = {
         orm.all('borgars',function(res){
             cb(res);
         })
-    }
+    },
+
+    update: function(id,cb){
+        orm.update('borgars',id,cb);
+    },
+
+create: function(name,cb){
+    orm.create('borgars', name, cb);
+}
+
 }
 
 module.exports = borgar;
